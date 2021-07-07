@@ -24,12 +24,12 @@ public class Dog implements Pet{
 //    public void setName(String name) {
 //        this.name = name;
 //    }
-    @PostConstruct
+//    @PostConstruct
     public void init(){
         System.out.println("Class Dog: init method");
     }
 
-    @PreDestroy
+//    @PreDestroy
     public void destroy(){
         System.out.println("Class Dog: destroy method");
     }
