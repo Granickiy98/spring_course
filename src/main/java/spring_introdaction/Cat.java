@@ -1,5 +1,8 @@
 package spring_introdaction;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Cat implements Pet{
 
     public Cat() {

@@ -2,14 +2,13 @@ package spring_introdaction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test5 {
+public class ConfirmWithAnnotations1 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext2.xml");
+                new ClassPathXmlApplicationContext("applicationContext3.xml");
 
-        Dog myDog = context.getBean("myPet",Dog.class);
-        myDog.say();
-        myDog.destroy();
+        Cat cat = context.getBean("cat",Cat.class);
+        cat.say();
 
         context.close();
     }
