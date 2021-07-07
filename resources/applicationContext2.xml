@@ -11,7 +11,8 @@
 
     <bean id="myPet"
           class="spring_introdaction.Dog"
-          scope="prototype">
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
 

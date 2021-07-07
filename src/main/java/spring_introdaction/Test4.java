@@ -8,12 +8,12 @@ public class Test4 {
                 new ClassPathXmlApplicationContext("applicationContext2.xml");
 
         Dog myDog = context.getBean("myPet",Dog.class);
-        myDog.setName("Bob");
+//        myDog.setName("Bob");
         Dog yourDog = context.getBean("myPet",Dog.class);
-        yourDog.setName("Nick");
+//        yourDog.setName("Nick");
 
-        System.out.println(myDog.getName());
-        System.out.println(yourDog.getName());
+//        System.out.println(myDog.getName());
+//        System.out.println(yourDog.getName());
 
         System.out.println("Variables refer for the same Object ? =  " + (myDog == yourDog) );
         System.out.println(myDog);
