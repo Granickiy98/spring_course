@@ -1,10 +1,7 @@
 package aop.aspects;
 
 import aop.Student;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -34,8 +31,13 @@ public class UniversityLiggingAspect {
 //    }
 
 
-    @AfterThrowing(pointcut = "execution(* getStudents())",throwing = "exception")
-    public void afterThrowingingGetStudentsLoggingAdvice(Throwable exception){
-        System.out.println("afterReturningGetStudentsLoggingAdvice logging exception : " + exception);
+//    @AfterThrowing(pointcut = "execution(* getStudents())",throwing = "exception")
+//    public void afterThrowingingGetStudentsLoggingAdvice(Throwable exception){
+//        System.out.println("afterReturningGetStudentsLoggingAdvice logging exception : " + exception);
+//    }
+
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLoggingAdvice(){
+        System.out.println("afterGetStudentsLoggingAdvice logging normal end methods or caught exception");
     }
 }
