@@ -14,7 +14,6 @@ public class Test3 {
         System.out.println("In library returned book: " + bookName);
 
 
-
         context.close();
         System.out.println("Method main end");
     }
