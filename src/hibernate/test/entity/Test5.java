@@ -1,23 +1,22 @@
-package hibernate_test.entity;
+package hibernate.test.entity;
 
-import hibernate_test.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class Test1 {
+public class Test5 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(hibernate_test.entity.Employee.class)
+                .addAnnotatedClass(Employee.class)
                 .buildSessionFactory();
         try {
             Session session = factory.openSession();
-            hibernate_test.entity.Employee employee = new Employee("Alexandr", "Ivanov", "IT", 600);
             session.beginTransaction();
-            session.save(employee);
+//            Employee employee = session.get(Employee.class,7);
+//            session.delete(employee);
+            session.createQuery("delete Employee where name = 'Alexandr'").executeUpdate();
             session.getTransaction().commit();
-            System.out.println(employee);
 
             System.out.println("DONE!");
         } finally {

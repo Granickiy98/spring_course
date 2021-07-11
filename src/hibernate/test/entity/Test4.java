@@ -1,10 +1,8 @@
-package hibernate_test.entity;
+package hibernate.test.entity;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.List;
 
 public class Test4 {
 
