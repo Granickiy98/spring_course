@@ -1,6 +1,6 @@
 package hibernate_one_to_one.entity;
 
-import hibernate_one_to_many_bi.entity.Employee;
+import hiberanete_one_to_many_uni.entity.Employee;
 
 import javax.persistence.*;
 
